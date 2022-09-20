@@ -131,7 +131,7 @@ pub struct Header {
     pub receipts_root: H256,
     pub logs_bloom: Bloom,
     pub difficulty: U256,
-    pub number: U256,
+    pub number: U64,
     pub gas_limit: U64,
     pub gas_used: U64,
     pub timestamp: U64,
