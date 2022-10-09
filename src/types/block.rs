@@ -115,7 +115,7 @@ pub struct Block {
     /// Block's transactions.
     pub transactions: Vec<Tx>,
     /// Block's uncles.
-    pub uncles: Vec<H256>,
+    pub uncles: ArrayVec<H256, 2>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub base_fee_per_gas: Option<U256>,
 }
