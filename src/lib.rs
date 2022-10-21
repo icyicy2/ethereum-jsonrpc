@@ -7,6 +7,7 @@ mod eth;
 mod net;
 mod otterscan;
 mod parity;
+mod pubsub;
 mod trace;
 pub mod types;
 mod web3;
@@ -18,6 +19,7 @@ pub use eth::*;
 pub use net::*;
 pub use otterscan::*;
 pub use parity::*;
+pub use pubsub::*;
 pub use trace::*;
 pub use web3::*;
 
