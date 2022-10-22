@@ -12,7 +12,7 @@ pub enum EthSubscriptionKind {
 #[serde(untagged)]
 pub enum EthSubscriptionResult {
     Syncing(SyncStatus),
-    NewHeads(Option<Block>),
+    NewHeads(Block),
 }
 
 #[cfg(any(feature = "client", feature = "server"))]
