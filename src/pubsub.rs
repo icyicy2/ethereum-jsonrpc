@@ -2,15 +2,17 @@ use crate::{prelude::*, SyncStatus};
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub enum EthSubscriptionKind {
-    Sync,
-    Block,
+    Syncing,
+    NewHeads,
 }
 
 #[derive(Serialize, Deserialize)]
+#[serde(untagged)]
 pub enum EthSubscriptionResult {
-    Sync(SyncStatus),
-    Block(Block),
+    Syncing(SyncStatus),
+    NewHeads(Option<Block>),
 }
 
 #[cfg(any(feature = "client", feature = "server"))]
